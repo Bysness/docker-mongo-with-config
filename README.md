@@ -1,5 +1,6 @@
-# mongo-with-config
+# docker-mongo-with-config
 Docker image that allows advance MongoDB configuration for replication, authentication, sharding etc.
+Quick replicaset setup available through bash script.
 
 ### Usage ###
 ```
