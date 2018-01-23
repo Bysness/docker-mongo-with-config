@@ -13,6 +13,32 @@ sudo docker ps
 ```
 By default, replica set `alpha` operates on ports 26000-26002 and `beta` on 26003-26005. You can change the ports by modifying the config files in `repl_alpha` and `repl_beta`. 
 
+To initialize the replicaset, follow the official MongoDB Replica Set documentation.
+
+```
+//connect to port 26000
+rs.initiate( {
+   _id : "alpha",
+   members: [
+      { _id: 0, host: "127.0.0.1:26000" },
+      { _id: 1, host: "127.0.0.1:26001" },
+      { _id: 2, host: "127.0.0.1:26002" }
+   ]
+});
+```
+
+```
+//connect to port 26003
+rs.initiate( {
+   _id : "beta",
+   members: [
+      { _id: 0, host: "127.0.0.1:26003" },
+      { _id: 1, host: "127.0.0.1:26004" },
+      { _id: 2, host: "127.0.0.1:26005" }
+   ]
+});
+```
+You should substitute 127.0.0.1 with your local adapter IP or a hostname if you want to connect to it from another computer
 
 ### Prerequisites ###
 1. Docker CE / EE
