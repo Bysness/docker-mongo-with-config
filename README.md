@@ -5,7 +5,7 @@ Quick replicaset setup available through bash script.
 ### Usage ###
 ```
 git clone https://github.com/Bysness/mongo-with-config.git
-sudo sh ./docker_mongo_replicaset_commands.sh
+sudo sh docker-mongo-with-config/docker_mongo_replicaset_commands.sh
 ```
 You can then test that the 6 mongo instances are running by doing
 ```
